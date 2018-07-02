@@ -2,5 +2,10 @@
   "name": "Umbrella-App",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.4",
+    "yarn": "^1.7.0"
+  }
 }

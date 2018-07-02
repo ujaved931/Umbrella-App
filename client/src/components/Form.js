@@ -13,9 +13,10 @@ class Form extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={}>
+                <form onSubmit={this.submitHandler}>
                 <label>Country:</label>
                 <input
+                value={this.state.country}
                 type="text"
                 name="country"
                 onChange={this.inputChangeHandler}
@@ -23,6 +24,7 @@ class Form extends Component {
                 <br/>
                 <label>City:</label>
                 <input
+                value={this.state.city}
                 type="text"
                 name="city"
                 onChange={this.inputChangeHandler}
@@ -30,6 +32,7 @@ class Form extends Component {
                 <br/>
                 <label>Zipcode:</label>
                 <input
+                value={this.state.zipcode}
                 type="text"
                 name="zipcode"
                 onChange={this.inputChangeHandler}
@@ -41,11 +44,13 @@ class Form extends Component {
         )
     }
     submitHandler = e => {
+        alert("check the weather")
         e.preventDefault();
+        console.log(this.state.country)
 
     };
     inputChangeHandler = e => {
-        const { name, value } = event.target;
+        const { name, value } = e.target;
 
         this.setState({ [name]: value })
     }
