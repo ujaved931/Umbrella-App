@@ -136,10 +136,15 @@ button:active {
 } */
 
 .Header-Form {
-    padding-top: 100px;
+    padding-top: 10px;
     background: rgb(94, 112, 68);
     width: auto;
-    height: 953px;
     background: url("img/bg1.jpg") no-repeat center center fixed;
+  }
+  
+  body {
+    background: url("img/bg1.jpg") no-repeat center center fixed;
+
+    max-height:100%;
 }
 

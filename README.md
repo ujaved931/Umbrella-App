@@ -3,13 +3,13 @@
 
 MVP 
 
-* [ ] React 
-* [ ] API integeration
-* [ ] Styling 
-* [ ] Tests?
+* [x] React 
+* [x] API integeration
+* [x] Styling 
 
 Stretch
 
+* [ ] Tests?
 * [ ] Geo-Location Integeration 
 * [ ] Back-end database for storing data
 * [ ] Authentication?
