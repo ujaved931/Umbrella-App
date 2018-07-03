@@ -56,9 +56,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      <div className="Header-Form">
       <Route path ='/' component={Header}/>
       <Route exact path ='/' render = {(props) => <Form {...props} getWeather = {this.getWeather} />}/>
       {this.state.error && <h4>{this.state.error}</h4>}
+      </div>
       <Route exact path ='/result' render = {(props) => <Weather {...props} 
       temperature={this.state.temperature} 
       city={this.state.city} 

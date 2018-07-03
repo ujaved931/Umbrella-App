@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Form.css'
 
 
 class Form extends Component {
@@ -10,28 +11,33 @@ class Form extends Component {
     render() {
         console.log("form",this.props)
         return (
-            <div>
+            <div className="form">
                 <form onSubmit={this.buttonHandler}>
-                    <label>Country:</label>
-                    <input
-                        value={this.state.country}
-                        type="text"
-                        name="country"
-                        onChange={this.inputChangeHandler}
-                        placeholder={"Input Country..."}
-                        />
-                    <br />
-                    <label>City:</label>
-                    <input
-                        value={this.state.city}
-                        type="text"
-                        name="city"
-                        onChange={this.inputChangeHandler}
-                        placeholder={"Input City..."}
-                    />
-                    <br />
+                <div className='country'>
+                
+                <label className='font-color'>Country:</label>
+                <input
+                value={this.state.country}
+                type="text"
+                name="country"
+                onChange={this.inputChangeHandler}
+                placeholder={"Input Country..."}
+                />
+                <br />
+                </div>
+                <div className='city'>
+                <label className='font-color'>City:</label>
+                <input
+                value={this.state.city}
+                type="text"
+                name="city"
+                onChange={this.inputChangeHandler}
+                placeholder={"Input City..."}
+                />
+                <br />
+                </div>
                     <div>
-                        <button type="submit">
+                        <button type="submit" class="btn btn-light">
                                 Do I need an umbrella?
                         </button>
                     </div>

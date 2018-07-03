@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-
+import './Header.css'
 class Header extends Component {
     render() {
     return (
-        <h1> Umbrella App </h1>
+        <img src="Untitled-1.png" className="Header" alt="Header"/> 
     )
     }
 }
