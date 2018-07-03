@@ -11,9 +11,10 @@ class Form extends Component {
     }
 
     render() {
+        console.log("form",this.props)
         return (
             <div>
-                <form onSubmit={this.props.getWeather}>
+                <form onSubmit={this.buttonHandler}>
                     <label>Country:</label>
                     <input
                         value={this.state.country}
@@ -39,32 +40,38 @@ class Form extends Component {
                     />
                     <br />
                     <div>
-                        <nav>
-                            <Link to={'/result'}>
+                        <button type="submit">
                                 Get weather
-                            </Link>
-                        </nav>
+                        </button>
                     </div>
                 </form>
             </div>
         )
     }
 
-    submitHandler = e => {
-        const results = this.state.getWeather
-        const newCity = {
-            country: '',
-            city: '',
-
-        }
-        results.push(newCity)
-        this.props.getWeather(results)
-        this.setState({
-            country: '',
-            city: '',
-
-        })
+    buttonHandler = e => {
+        e.preventDefault();
+        const city = e.target.elements.city.value;
+        const country = e.target.elements.country.value;
+        this.props.getWeather(city, country);
+        this.props.history.push('/result');
     }
+
+    // submitHandler = e => {
+    //     const results = this.state.getWeather
+    //     const newCity = {
+    //         country: '',
+    //         city: '',
+
+    //     }
+    //     results.push(newCity)
+    //     this.props.getWeather(results)
+    //     this.setState({
+    //         country: '',
+    //         city: '',
+
+    //     })
+    // }
 
     inputChangeHandler = e => {
         const { name, value } = e.target;

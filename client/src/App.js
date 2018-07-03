@@ -28,11 +28,7 @@ class App extends Component {
   }
   
     
-  getWeather = async (e) => {
-    console.log(this.state);    
-    e.preventDefault();
-    const city = e.target.elements.city.value;
-    const country = e.target.elements.country.value;
+  getWeather = async (city, country) => {
     const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`);
     const data = await api_call.json();
     console.log(data);
@@ -49,9 +45,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Route exact path ='/' component={Header}/>
-      <Route exact path ='/' component = {(props) => <Form {...props} getWeather = {this.getWeather} />}/>
-      <Route exact path ='/result' component = {(props) => <Weather {...props} 
+      <Route path ='/' component={Header}/>
+      <Route exact path ='/' render = {(props) => <Form {...props} getWeather = {this.getWeather} />}/>
+      <Route exact path ='/result' render = {(props) => <Weather {...props} 
       temperature={this.state.temperature} 
       city={this.state.city} 
       country={this.state.country} 
