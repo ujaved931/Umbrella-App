@@ -5,8 +5,6 @@ class Form extends Component {
     state = {
         country: '',
         city: '',
-
-        Weather: []
     }
 
     render() {
@@ -20,7 +18,8 @@ class Form extends Component {
                         type="text"
                         name="country"
                         onChange={this.inputChangeHandler}
-                    />
+                        placeholder={"Input Country..."}
+                        />
                     <br />
                     <label>City:</label>
                     <input
@@ -28,19 +27,12 @@ class Form extends Component {
                         type="text"
                         name="city"
                         onChange={this.inputChangeHandler}
-                    />
-                    <br />
-                    <label>Zipcode:</label>
-                    <input
-                        value={this.state.zipcode}
-                        type="text"
-                        name="zipcode"
-                        onChange={this.inputChangeHandler}
+                        placeholder={"Input City..."}
                     />
                     <br />
                     <div>
                         <button type="submit">
-                                Get weather
+                                Do I need an umbrella?
                         </button>
                     </div>
                 </form>
