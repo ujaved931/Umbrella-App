@@ -37,7 +37,7 @@ class Form extends Component {
                 <br />
                 </div>
                     <div>
-                        <button type="submit" class="btn btn-light">
+                        <button type="submit" className="btn btn-light">
                                 Do I need an umbrella?
                         </button>
                     </div>

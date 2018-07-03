@@ -3,7 +3,7 @@ import './Header.css'
 class Header extends Component {
     render() {
     return (
-        <img src="Untitled-1.png" className="Header" alt="Header"/> 
+        <div className="Header"> </div> 
     )
     }
 }
