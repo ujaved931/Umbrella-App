@@ -16,6 +16,7 @@ class Weather extends Component {
                 { this.props.description === "drizzle" && <h3>You need an umbrella</h3>}
                 { this.props.description === "sunny" && <h3>You need an umbrella</h3>}
                 { this.props.description === "light intensity shower rain" && <h3>You need an umbrella</h3>}
+                { this.props.description === "moderate rain" && <h3>You need an umbrella</h3>}
             </div>
         )
     }
