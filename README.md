@@ -1,5 +1,5 @@
 # Umbrella-App
-
+Hackathon project, app that convieniently displays wether you need umbrella or not. 
 
 MVP 
 
